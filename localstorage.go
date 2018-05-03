@@ -10,8 +10,8 @@ func SetItem(tag string, a interface{}) {
 }
 
 // GetItem calls localstorage.getItem()
-func GetItem(tag string) interface{} {
-	return js.Global.Get("localStorage").Call("getItem", tag).Interface()
+func GetItem(tag string) string {
+	return js.Global.Get("localStorage").Call("getItem", tag).String()
 }
 
 // RemoveItem calls localstorage.removeItem()
